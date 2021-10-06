@@ -41,6 +41,12 @@ var Trikampis = /** @class */ (function () {
         else {
             console.log("Trikampis NEegzistuoja!");
         }
+        if (this.arTrikampisStatusis()) {
+            console.log("Trikampis Statusis!");
+        }
+        else {
+            console.log("Trikampis NE status!");
+        }
         console.log("------------");
     };
     Trikampis.prototype.trikampioPerimetas = function () {

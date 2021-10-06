@@ -47,6 +47,12 @@ public spausdintiDuomenis(): void {
     } else{
         console.log("Trikampis NEegzistuoja!");
     }
+
+    if(this.arTrikampisStatusis()) {
+        console.log("Trikampis Statusis!");  
+    } else{
+        console.log("Trikampis NE status!");
+    }
        console.log("------------");
     }
 
