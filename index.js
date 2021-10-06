@@ -14,7 +14,7 @@
  */
 var Trikampis = /** @class */ (function () {
     function Trikampis(a, b, c) {
-        console.log("Konstruktorius iskviestas");
+        //console.log("Konstruktorius iskviestas");
         this.a = a;
         this.b = b;
         this.c = c;

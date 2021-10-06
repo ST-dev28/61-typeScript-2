@@ -15,19 +15,19 @@
 
 
 class Trikampis {
-a: number;   
-b: number;
-c: number;
+    public a: number;   
+    public b: number;
+    public c: number;
 
 constructor(a: number, b: number, c: number) {
-console.log("Konstruktorius iskviestas");
-this.a = a;
-this.b = b;
-this.c = c;
+//console.log("Konstruktorius iskviestas");
+    this.a = a;
+    this.b = b;
+    this.c = c;
 }
 spausdintiDuomenis(): void {
-        console.log(`Trikampio krastines yra: ${this.a}, ${this.b}, ${this.c} cm.`);
-        console.log("------------");
+    console.log(`Trikampio krastines yra: ${this.a}, ${this.b}, ${this.c} cm.`);
+    console.log("------------");
     }
 }
 
