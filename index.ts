@@ -26,7 +26,7 @@ constructor(a: number, b: number, c: number) {
     this.c = c;
 }
 spausdintiDuomenis(): void {
-    console.log(`Trikampio krastines yra: ${this.a}, ${this.b}, ${this.c} cm.`);
+    console.log(`Trikampio krastines yra (cm): a = ${this.a}, b = ${this.b}, c = ${this.c}.`);
     console.log("------------");
     }
 }
