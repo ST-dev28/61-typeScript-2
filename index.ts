@@ -11,6 +11,10 @@
  *
  * 5. Aprašykite metodą "spausdintiDuomenis()", kuris atspausdina
  * visus trikampio duomenis (kraštines) į konsolę.
+ * 
+ * 6. Papildykite klasę metodu, kuris apskaičiuoja ir grąžina
+ * trikampio perimetrą. Spausdinant trikampio duomenis
+ * atspausdinkite ir jo perimetrą.
  */
 
 
@@ -28,6 +32,10 @@ constructor(a: number, b: number, c: number) {
 spausdintiDuomenis(): void {
     console.log(`Trikampio krastines yra (cm): a = ${this.a}, b = ${this.b}, c = ${this.c}.`);
     console.log("------------");
+
+    }
+    trikampioPerimetas(): number {
+        return this.a + this.b + this.c;
     }
 }
 
