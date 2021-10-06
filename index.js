@@ -20,6 +20,20 @@
  * egzistuoti (metodas turi grąžinti boolean reikšmę).
  * Spausdindami duomenis pasakykite, ar toks trikampis gali
  * egzistuoti.
+ *
+ * 8. Papildykite klasę metodu, kuris nurodo, ar trikampis yra
+ * statusis.
+ *
+ * 9. Sukurkite masyvą, kuris saugo trikampių reikšmes,
+ * panaudodami ciklą atspausdinkite visų masyve esančių trikampių
+ * duomenis.
+ *
+ * 10. ND: Papildykite programą funkcionalumu, kuris trikampių
+ * masyvą užpildo trikampiais (50 reikšmių), kurių kraštinės yra
+ * atsitiktinės reikšmės.
+ *
+ * Papildoma: Vėliau programa masyvą prafiltravus
+ * paliktų tik egzistuojančius trikampius ir atspausdintų jų duomenis.
  */
 var Trikampis = /** @class */ (function () {
     function Trikampis(a, b, c) {
