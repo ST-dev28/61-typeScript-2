@@ -42,17 +42,20 @@ public spausdintiDuomenis(): void {
     //console.log(`Ar trikampis 1 egzistuoja:  ${trikampis2.arTrikampisEgzistuoja()}.`);
     console.log("------------");
 
-    if(this.arTrikampisEgzistuoja()) {
+    /*if(this.arTrikampisEgzistuoja()) {
         console.log("Trikampis egzistuoja!");  
     } else{
         console.log("Trikampis NEegzistuoja!");
-    }
+    }*/
+    
+    console.log(`Trikampis ${this.arTrikampisEgzistuoja ? "egzistuoja" : "neegzistuoja"}`);
+    console.log(`Trikampis ${this.arTrikampisStatusis? "statusis" : "ne statusis"}`);
 
-    if(this.arTrikampisStatusis()) {
+    /*if(this.arTrikampisStatusis()) {
         console.log("Trikampis Statusis!");  
     } else{
         console.log("Trikampis NE status!");
-    }
+    }*/
        console.log("------------");
     }
 
@@ -89,3 +92,10 @@ trikampis2.spausdintiDuomenis();
 
 console.log(trikampis1);
 console.log(trikampis2);
+
+const trikampiai: Trikampis[] = [new Trikampis(10, 10, 20)];   // sis arba kitas var
+trikampiai.push(new Trikampis(10, 10, 20));                    // sis arba kitas var
+
+for (const trikampis of trikampiai ) {             // sis arba kitas var
+    trikampis.spausdintiDuomenis();
+}

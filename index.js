@@ -35,18 +35,18 @@ var Trikampis = /** @class */ (function () {
         console.log("Ar trikampis stausis:  " + trikampis1.arTrikampisStatusis() + ".");
         //console.log(`Ar trikampis 1 egzistuoja:  ${trikampis2.arTrikampisEgzistuoja()}.`);
         console.log("------------");
-        if (this.arTrikampisEgzistuoja()) {
+        /*if(this.arTrikampisEgzistuoja()) {
             console.log("Trikampis egzistuoja!");
-        }
-        else {
+        } else{
             console.log("Trikampis NEegzistuoja!");
-        }
-        if (this.arTrikampisStatusis()) {
+        }*/
+        console.log("Trikampis " + (this.arTrikampisEgzistuoja ? "egzistuoja" : "neegzistuoja"));
+        console.log("Trikampis " + (this.arTrikampisStatusis ? "statusis" : "ne statusis"));
+        /*if(this.arTrikampisStatusis()) {
             console.log("Trikampis Statusis!");
-        }
-        else {
+        } else{
             console.log("Trikampis NE status!");
-        }
+        }*/
         console.log("------------");
     };
     Trikampis.prototype.trikampioPerimetas = function () {
@@ -79,3 +79,9 @@ trikampis1.spausdintiDuomenis();
 trikampis2.spausdintiDuomenis();
 console.log(trikampis1);
 console.log(trikampis2);
+var trikampiai = [new Trikampis(10, 10, 20)]; // sis arba kitas var
+trikampiai.push(new Trikampis(10, 10, 20)); // sis arba kitas var
+for (var _i = 0, trikampiai_1 = trikampiai; _i < trikampiai_1.length; _i++) { // sis arba kitas var
+    var trikampis = trikampiai_1[_i];
+    trikampis.spausdintiDuomenis();
+}
