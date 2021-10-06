@@ -25,6 +25,8 @@ var Trikampis = /** @class */ (function () {
     }
     Trikampis.prototype.spausdintiDuomenis = function () {
         console.log("Trikampio krastines yra (cm): a = " + this.a + ", b = " + this.b + ", c = " + this.c + ".");
+        console.log("Trikampio perimetras (cm):  " + trikampis1.trikampioPerimetas() + ".");
+        console.log("Trikampio perimetras (cm):  " + trikampis2.trikampioPerimetas() + ".");
         console.log("------------");
     };
     Trikampis.prototype.trikampioPerimetas = function () {
