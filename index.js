@@ -15,6 +15,11 @@
  * 6. Papildykite klasę metodu, kuris apskaičiuoja ir grąžina
  * trikampio perimetrą. Spausdinant trikampio duomenis
  * atspausdinkite ir jo perimetrą.
+ *
+ * 7. Parašykite metodą, kuris nusako, ar toks trikampis gali
+ * egzistuoti (metodas turi grąžinti boolean reikšmę).
+ * Spausdindami duomenis pasakykite, ar toks trikampis gali
+ * egzistuoti.
  */
 var Trikampis = /** @class */ (function () {
     function Trikampis(a, b, c) {
@@ -25,12 +30,29 @@ var Trikampis = /** @class */ (function () {
     }
     Trikampis.prototype.spausdintiDuomenis = function () {
         console.log("Trikampio krastines yra (cm): a = " + this.a + ", b = " + this.b + ", c = " + this.c + ".");
-        console.log("Trikampio perimetras (cm):  " + trikampis1.trikampioPerimetas() + ".");
-        console.log("Trikampio perimetras (cm):  " + trikampis2.trikampioPerimetas() + ".");
+        console.log("Trikampio 1 perimetras (cm):  " + trikampis1.trikampioPerimetas() + ".");
+        console.log("Trikampio 2 perimetras (cm):  " + trikampis2.trikampioPerimetas() + ".");
+        //console.log(`Ar trikampis 1 egzistuoja:  ${trikampis1.arTrikampisEgzistuoja()}.`);
+        //console.log(`Ar trikampis 1 egzistuoja:  ${trikampis2.arTrikampisEgzistuoja()}.`);
+        console.log("------------");
+        if (this.arTrikampisEgzistuoja()) {
+            console.log("Trikampis egzistuoja!");
+        }
+        else {
+            console.log("Trikampis NEegzistuoja!");
+        }
         console.log("------------");
     };
     Trikampis.prototype.trikampioPerimetas = function () {
         return this.a + this.b + this.c;
+    };
+    Trikampis.prototype.arTrikampisEgzistuoja = function () {
+        if (this.a + this.b > this.c ||
+            this.a + this.c > this.b ||
+            this.b + this.c > this.a) {
+            return true;
+        }
+        return false;
     };
     return Trikampis;
 }());
