@@ -35,3 +35,6 @@ const trikampis1 = new Trikampis(10, 10, 20);
 const trikampis2 = new Trikampis(10, 15, 30);
 trikampis1.spausdintiDuomenis();
 trikampis2.spausdintiDuomenis();
+
+console.log(trikampis1);
+console.log(trikampis2);
