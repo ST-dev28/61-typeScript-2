@@ -32,7 +32,7 @@ var Trikampis = /** @class */ (function () {
         console.log("Trikampio krastines yra (cm): a = " + this.a + ", b = " + this.b + ", c = " + this.c + ".");
         console.log("Trikampio 1 perimetras (cm):  " + trikampis1.trikampioPerimetas() + ".");
         console.log("Trikampio 2 perimetras (cm):  " + trikampis2.trikampioPerimetas() + ".");
-        //console.log(`Ar trikampis 1 egzistuoja:  ${trikampis1.arTrikampisEgzistuoja()}.`);
+        console.log("Ar trikampis stausis:  " + trikampis1.arTrikampisStatusis() + ".");
         //console.log(`Ar trikampis 1 egzistuoja:  ${trikampis2.arTrikampisEgzistuoja()}.`);
         console.log("------------");
         if (this.arTrikampisEgzistuoja()) {
@@ -50,6 +50,17 @@ var Trikampis = /** @class */ (function () {
         if (this.a + this.b > this.c ||
             this.a + this.c > this.b ||
             this.b + this.c > this.a) {
+            return true;
+        }
+        return false;
+    };
+    Trikampis.prototype.arTrikampisStatusis = function () {
+        var a2 = this.a * this.a;
+        var b2 = this.b * this.b;
+        var c2 = this.c * this.c;
+        if (a2 + b2 === c2 ||
+            c2 + b2 === a2 ||
+            a2 + c2 === b2) {
             return true;
         }
         return false;
