@@ -29,14 +29,9 @@ spausdintiDuomenis(): void {
         console.log(`Trikampio krastines yra: ${this.a}, ${this.b}, ${this.c} cm.`);
         console.log("------------");
     }
-
-    trikampioPerimetas(): number {
-        return this.a + this.b + this.c;
-    }
 }
 
 const trikampis1 = new Trikampis(10, 10, 20);
 const trikampis2 = new Trikampis(10, 15, 30);
 trikampis1.spausdintiDuomenis();
 trikampis2.spausdintiDuomenis();
-

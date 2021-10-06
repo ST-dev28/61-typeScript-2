@@ -23,9 +23,6 @@ var Trikampis = /** @class */ (function () {
         console.log("Trikampio krastines yra: " + this.a + ", " + this.b + ", " + this.c + " cm.");
         console.log("------------");
     };
-    Trikampis.prototype.trikampioPerimetas = function () {
-        return this.a + this.b + this.c;
-    };
     return Trikampis;
 }());
 var trikampis1 = new Trikampis(10, 10, 20);
