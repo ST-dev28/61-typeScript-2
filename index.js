@@ -87,6 +87,7 @@ class Trikampis {
                 this.b + this.c > this.a ||
                 this.a + this.c > this.b;
         }*/
+
     // tikrinam, ar trikampis statusis
     arTikampisStatusis() {
         const a2 = this.a * this.a;
@@ -120,10 +121,12 @@ const trikampis = new Trikampis(2, 10, 15);
 const trikampis1 = new Trikampis(2, 50, 16);
 const trikampis2 = new Trikampis(3, 4, 81);
 const trikampis3 = new Trikampis(5, 8, 30);
+
 //trikampis1.spausdintiDuomenis();
 //trikampis2.spausdintiDuomenis();
 //console.log(trikampis1);
 //console.log(trikampis2);
+
 let trikampiai = [];
 //kurima random parametrus (trikampio duomenis)
 function getRandomNumber() {
@@ -138,6 +141,7 @@ function createTrikampius(quantity = 50) {
 }
 //iskvieciam funkcija reikiamam kiekiui elementu (siu atveju trikampiu) masyve atspausdinti
 createTrikampius();
+
 //spausdina duomenis is uzduoto masyvo
 function spausdintiRezultata(newArray) {
     let count = 1;
@@ -149,28 +153,30 @@ function spausdintiRezultata(newArray) {
 }
 // spausdina visa detalia informacija apie trikampius, pagal uzduotas salygas/veiksmus auksciau
 //spausdintiRezultata(trikampiai);
+
 // issfiltruojam trikampius, kurie egzistuoja (true)
 const existingTrikampiai = trikampiai.filter(trikampis => trikampis.arTrikampisEgzistuoja() === true);
 console.log(existingTrikampiai);
 // spausdina visas uzduotas auksciau detales (visa kita info)
 //spausdintiRezultata(existingTrikampiai);
-/*************************/
-/*const trikampiai: Trikampis[] = [];
+
+/*
+const trikampiai: Trikampis[] = [];
 for (let i = 0; i <= 49; i++) {
 
-  let aAny: number = Math.floor(Math.random() * 100);
-  let bAny: number = Math.floor(Math.random() * 100);
-  let cAny: number = Math.floor(Math.random() * 100);
+    let aAny: number = Math.floor(Math.random() * 100);
+    let bAny: number = Math.floor(Math.random() * 100);
+    let cAny: number = Math.floor(Math.random() * 100);
 
-  trikampiai.push(new Trikampis(aAny, bAny, cAny));
+    trikampiai.push(new Trikampis(aAny, bAny, cAny));
 }
 //console.table(trikampiai);
 console.log(trikampiai);
 
 for (const trikampis of trikampiai) {
-  if (trikampis.arTrikampisEgzistuoja){
-    trikampis.spausdintiDuomenis();
-  }
+    if (trikampis.arTrikampisEgzistuoja) {
+        trikampis.spausdintiDuomenis();
+    }
 }
 
 // keli galimi variantai
@@ -178,6 +184,7 @@ for (const trikampis of trikampiai) {
 //trikampiai.push(new Trikampis(10, 10, 20));                                           // sis arba kitas var
 //console.log(trikampiai);
 
-for (let {a, b, c} of trikampiai ) {                                                  // sis arba kitas var
+for (let { a, b, c } of trikampiai) {                                                  // sis arba kitas var
     trikampis.spausdintiDuomenis();
-}*/ 
+}
+*/

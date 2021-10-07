@@ -109,7 +109,6 @@ class Trikampis {
         return false;
     }
 
-
     // generuojam atsistiktinius skaicius
     public getRandomNumber(): number {
         return Math.floor(Math.random() * 100);
