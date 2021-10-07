@@ -53,8 +53,8 @@ class Trikampis {
         console.log(`Trikampio krastines yra (cm): a = ${this.a}, b = ${this.b}, c = ${this.c}.`);
         console.log(`Trikampio perimetras (cm):  ${this.trikampioPerimetas()}.`);
         console.log(`Ar trikampis stausis:  ${this.arTikampisStatusis()}.`);
-        console.log(`Ar trikampis egzistuoja =>  ${this.arTrikampisEgzistuoja()}.`);
-        //console.log(`Ar trikampis egsistuoja => ${(this.arTrikampisEgzistuoja) ? "Taip" : "Ne"}`);  //su ternary operatorium
+        //console.log(`Ar trikampis egzistuoja =>  ${this.arTrikampisEgzistuoja}.`);
+        console.log(`Ar trikampis egsistuoja => ${(this.arTrikampisEgzistuoja) ? "Taip" : "Ne"}`);  //su ternary operatorium
         //console.log(`Trikampis ${this.arTrikampisEgzistuoja ? "egzistuoja" : "neegzistuoja"}.`);
         //console.log(`Ar trikampis statusis => ${(this.arTikampisStatusis) ? "Taip" : "Ne"}`); //ternary iskart spausdina tinkama atsakyma
         //console.log("------------");
@@ -77,24 +77,25 @@ class Trikampis {
     public trikampioPerimetas(): number {
         return this.a + this.b + this.c;
     }
-
-    // tikrinam, ar trikampis su uzduotais parametrais gali egzistuoti
-    public arTrikampisEgzistuoja(): boolean {
-        if (this.a + this.b > this.c &&
-            this.a + this.c > this.b &&
-            this.b + this.c > this.a &&
-            this.a !== 0 && this.b !== 0 && this.c !== 0) {
-            return true;
-        }
-        return false;
-    }
     /*
-        // metodas su GET ir ternary operatorium
-        public get arTrikampisEgzistuoja(): boolean {
-            return this.a + this.b > this.c ||
-                this.b + this.c > this.a ||
-                this.a + this.c > this.b;
+        // tikrinam, ar trikampis su uzduotais parametrais gali egzistuoti
+        public arTrikampisEgzistuoja(): boolean {
+            if (this.a + this.b > this.c &&
+                this.a + this.c > this.b &&
+                this.b + this.c > this.a &&
+                this.a !== 0 && this.b !== 0 && this.c !== 0) {
+                return true;
+            }
+            return false;
         }*/
+
+    // metodas su GET ir ternary operatorium
+    public get arTrikampisEgzistuoja(): boolean {
+        return this.a + this.b > this.c &&
+            this.b + this.c > this.a &&
+            this.a + this.c > this.b &&
+            this.a !== 0 && this.b !== 0 && this.c !== 0;
+    }
 
     // tikrinam, ar trikampis statusis
     public arTikampisStatusis(): boolean {
@@ -133,17 +134,17 @@ const trikampis1 = new Trikampis(2, 50, 16);
 const trikampis2 = new Trikampis(3, 4, 81);
 const trikampis3 = new Trikampis(5, 8, 30);
 
-//trikampis1.spausdintiDuomenis();
+trikampis.spausdintiDuomenis();
 //trikampis2.spausdintiDuomenis();
 
-//console.log(trikampis1);
+console.log(trikampis);
 //console.log(trikampis2);
 
 let trikampiai: Trikampis[] = [];
 
 //kurima random parametrus (trikampio duomenis)
 function getRandomNumber(): number {
-    return Math.floor(Math.random() * 100) + 1;
+    return Math.floor(Math.random() * 50);
 }
 
 //kuriam random trikampius
@@ -169,12 +170,13 @@ function spausdintiRezultata(newArray: Trikampis[]): void {
 //spausdintiRezultata(trikampiai);
 
 // issfiltruojam trikampius, kurie egzistuoja (true)
-const existingTrikampiai = trikampiai.filter(trikampis => trikampis.arTrikampisEgzistuoja() === true);
+const existingTrikampiai = trikampiai.filter(trikampis => trikampis.arTrikampisEgzistuoja);
 console.log(existingTrikampiai);
 // spausdina visas uzduotas auksciau detales (visa kita info)
 //spausdintiRezultata(existingTrikampiai);
 
 /*************************/
+// altrenatyvus sprendinio variantas
 /*const trikampiai: Trikampis[] = [];
 for (let i = 0; i <= 49; i++) {
 
